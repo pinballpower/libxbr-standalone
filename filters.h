@@ -37,18 +37,8 @@
 extern "C" {
 #endif
 
-#ifdef _MSC_VER
-	#define XBR_INLINE __inline
-
-	#ifdef XBR_INTERNAL
-		#define XBR_EXPORT __declspec(dllexport)
-	#else
-		#define XBR_EXPORT __declspec(dllimport)
-	#endif
-#else
-	#define XBR_INLINE inline
-	#define XBR_EXPORT
-#endif
+#define XBR_INLINE inline
+#define XBR_EXPORT
 
 typedef struct {
     uint32_t rgbtoyuv[1<<24];
